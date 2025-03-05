@@ -13,14 +13,13 @@ public class Atv9 {
         livro1.setAutor(ler.nextLine());
         System.out.println("Insira o total de páginas: ");
         livro1.setTotalPaginas(ler.nextInt());
+        System.out.println("Insira o número de páginas lidas: ");
+        livro1.setPaginasLidas(ler.nextInt());
         while(livro1.getPaginasLidas()< 0 || livro1.getPaginasLidas() > livro1.getTotalPaginas()){
             System.out.println("Insira um número de páginas válido: ");
+            livro1.setPaginasLidas(ler.nextInt());
         }
-        livro1.setPaginasLidas(ler.nextInt());
-        System.out.println("Insira o número de páginas lidas: ");
-        
-        
-        livro1.setPaginasLidas(ler.nextInt());
+        livro1.mostrarInfo();
         
         
     }

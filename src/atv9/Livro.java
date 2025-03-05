@@ -51,12 +51,19 @@ public class Livro {
         }
         return porcent;
     }
-    public void exibirProgresso(){
+    public String exibirProgresso(){
         if(getLeituraCompleta()){
-            System.out.println("Leitura comleta");
+            return "Leitura completa";
         } else{
-            System.out.println(calcularPorcentagem() + "%");
+            return calcularPorcentagem() + "%";
         }
+    }
+    
+    public void mostrarInfo(){
+        System.out.println("Título: " + this.titulo);
+        System.out.println("Autor: " + this.autor);
+        System.out.println("Total de páginas: " + this.totalPaginas);
+        System.out.println("Progresso: " + this.exibirProgresso());
     }
     
 }
